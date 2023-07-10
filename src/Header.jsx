@@ -1,9 +1,13 @@
 const Header = () => {
   return (
-    <header>
-      <img src="https://www.docplanner.com/img/logo-default-group-en.svg?v=1" alt="Docplanner Group" />
+    <header className="header">
+      <img
+        className="header-logo"
+        src="https://www.docplanner.com/img/logo-default-group-en.svg?v=1"
+        alt="Docplanner Group"
+      />
       <nav>
-        <ul>
+        <ul className="menu-list">
           <li>
             <a href="#">About us</a>
           </li>

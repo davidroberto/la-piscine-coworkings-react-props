@@ -1,21 +1,29 @@
 import Coworking from "./Coworking";
 
 const BestCoworkings = ({ coworkings }) => {
-  // trouve dans tous les coworkings ceux qui ont une note supérieure ou égale à 4
-  // on utilise la fonction filter (qui fait une boucle)
+  const displayBestCoworkings = false;
 
-  const bestCoworkings = coworkings.filter((coworking) => {
-    return coworking.rating >= 4;
-  });
+  // au click sur le bouton,
+  // je veux afficher les coworkings
+  // pour ça, je dois changer la valeur de displayBestCoworkings
+
+  const handleClick = () => {
+    console.log("click");
+  };
 
   return (
-    <section>
+    <section className="best-coworkings-section">
       <h2>Best coworkings</h2>
-      <div>
-        {bestCoworkings.map((coworking) => {
-          return <Coworking coworking={coworking} />;
-        })}
-      </div>
+
+      <button onClick={handleClick}>Afficher les coworkings</button>
+
+      {displayBestCoworkings && (
+        <div className="coworkings-list">
+          {coworkings.map((coworking) => {
+            return <Coworking coworking={coworking} />;
+          })}
+        </div>
+      )}
     </section>
   );
 };

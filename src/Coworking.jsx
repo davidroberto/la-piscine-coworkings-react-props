@@ -1,6 +1,6 @@
 const Coworking = ({ coworking }) => {
   return (
-    <article key={coworking.id}>
+    <article className="coworking-card" key={coworking.id}>
       <img src={coworking.image} alt={coworking.name} />
       <h3>{coworking.name}</h3>
       <p>{coworking.address}</p>

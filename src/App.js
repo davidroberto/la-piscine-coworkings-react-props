@@ -3,6 +3,7 @@ import BestCoworkings from "./BestCoworkings";
 import Coworkings from "./Coworkings";
 import Footer from "./Footer";
 import Header from "./Header";
+import Welcome from "./Welcome";
 
 function App() {
   const coworkingsFromFakeApi = [
@@ -43,6 +44,8 @@ function App() {
   return (
     <>
       <Header />
+      {/* <Rentings /> */}
+      <Welcome />
       <Coworkings coworkings={coworkingsFromFakeApi} />
       <BestCoworkings coworkings={coworkingsFromFakeApi} />
       <Footer />
